@@ -1,0 +1,27 @@
+<div class="swiper-container swiper-container-initialized swiper-container-horizontal ng-star-inserted"
+    style="cursor: grab;">
+    <div class="swiper-wrapper h-100">
+        <swiper class="swiper-slide ng-star-inserted swiper-slide-active" [config]="config"
+            (indexChange)="onIndexChange($event)" *ngIf="name=='feature'">
+
+            <div *ngFor="let product of featureProducts" style="width: 295px; margin-right: 16px; display:inline-block">
+                <mat-card class="mat-card mat-focus-indicator product-item">
+                    <a class="image-link" href="/products/1/Keyboard"><img class="swiper-lazy swiper-lazy-loaded"
+                            src="{{product}}"></a>
+                </mat-card>
+            </div>
+
+        </swiper>
+        <swiper class="swiper-slide ng-star-inserted swiper-slide-active" [config]="config"
+            (indexChange)="onIndexChange($event)" *ngIf="name=='sale'">
+
+            <div *ngFor="let product of saleProducts" style="width: 324px; margin-right: 16px; display:inline-block">
+                <mat-card class="mat-card mat-focus-indicator product-item">
+                    <a class="image-link" href="/products/1/Keyboard"><img class="swiper-lazy swiper-lazy-loaded"
+                            src="{{product}}"></a>
+                </mat-card>
+            </div>
+
+        </swiper>
+    </div>
+</div>

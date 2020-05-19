@@ -1,0 +1,44 @@
+<div class="main-slider">
+    <div class="swiper-container h-100 swiper-container-initialized swiper-container-horizontal" style="cursor: grab;">
+        <div class="swiper-wrapper h-100">
+            <div class="swiper-slide ng-star-inserted" style="width: 1300px;">
+                <swiper class="swiper-container" [config]="config" (indexChange)="onIndexChange($event)" >
+                    <div *ngFor="let slide of slides" class="swiper-slide">
+                      <div class="slide-item swiper-lazy swiper-lazy-loaded" fxLayout="column" fxLayoutAlign="center center" fxFlexFill [style.background-image]="'url(' + slide + ')'">
+                        <div class="mask"></div>
+                        <div fxlayout="column" fxlayoutalign="center center" class="content"
+                            style="flex-direction: column; box-sizing: border-box; display: flex; place-content: center; align-items: center;">
+                            <h1>Summer collection</h1>
+                            <h3>New Arrivals On Sale</h3>
+                            <button mat-raised-button="" color="primary"
+                                class="mat-focus-indicator mat-raised-button mat-button-base mat-primary"><span
+                                    class="mat-button-wrapper">Shop now</span>
+                                <div matripple="" class="mat-ripple mat-button-ripple"></div>
+                                <div class="mat-button-focus-overlay"></div>
+                            </button>
+                        </div>
+                      </div>
+                    </div>
+                  </swiper>
+            </div>
+            <!-- <div class="swiper-slide ng-star-inserted swiper-slide-active"
+                style="width: 1300px;">
+                <div class="slide-item swiper-lazy swiper-lazy-loaded"
+                    style="background-image: url('../../assets/images/banner2.jpg');">
+                    <div class="mask"></div>
+                    <div fxlayout="column" fxlayoutalign="center center" class="content"
+                        style="flex-direction: column; box-sizing: border-box; display: flex; place-content: center; align-items: center;">
+                        <h1>Summer collection</h1>
+                        <h3>New Arrivals On Sale</h3><button
+                            mat-raised-button="" color="primary"
+                            class="mat-focus-indicator mat-raised-button mat-button-base mat-primary"><span
+                                class="mat-button-wrapper">Shop now</span>
+                            <div matripple="" class="mat-ripple mat-button-ripple"></div>
+                            <div class="mat-button-focus-overlay"></div>
+                        </button>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+<mat-sidenav-container>
+    <mat-toolbar>
+        <mat-toolbar-row color="primary" class="mat-toolbar mat-primary mat-toolbar-multiple-rows"
+            style="place-content: center space-between; align-items: center; flex-direction: row; box-sizing: border-box; display: flex;">
+            <div style="flex: 1 1 100%; box-sizing: border-box; max-width: 20%;">
+                <a routerlink="/" class="logo" href="/">Saggezza</a>
+            </div>
+            <div fxflex="" fxshow="false" fxshow.gt-sm="" style="flex: 1 1 0%; box-sizing: border-box;">
+                <form class="search-form" style="flex-direction: row;box-sizing: border-box; display: flex;">
+                    <button mat-raised-button class="mat-focus-indicator 
+                    mat-menu-trigger mat-elevation-z0 categories text-truncate 
+                    text-muted mat-raised-button mat-button-base" style="background-color: white !important">
+                        <span class="mat-button-wrapper">All Categories
+                            <mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color"
+                                aria-hidden="true">
+                                arrow_drop_down</mat-icon>
+                        </span>
+                        <div matripple="" class="mat-ripple mat-button-ripple"></div>
+                        <div class="mat-button-focus-overlay"></div>
+                    </button>
+                    <input type="text" placeholder="Type to search..." style="flex: 1 1 0%; box-sizing: border-box;">
+                    <button type="button" mat-mini-fab
+                        class="mat-focus-indicator search-btn mat-elevation-z0 text-muted mat-mini-fab mat-button-base mat-accent">
+                        <span class="mat-button-wrapper">
+                            <mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color"
+                                aria-hidden="true">search</mat-icon>
+                        </span>
+                        <div matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></div>
+                        <div class="mat-button-focus-overlay"></div>
+                    </button>
+                </form>
+            </div>
+            <div  fxflex="20" fxlayout="row" fxlayoutalign="end center"
+                style="place-content: center flex-end; align-items: center; flex-direction: row; box-sizing: border-box; display: flex; flex: 1 1 100%; max-width: 20%;">
+                <div fxlayoutalign="center center" fxhide="false" fxhide.gt-sm
+                    style="place-content: center; align-items: center; flex-direction: row; box-sizing: border-box;">
+                    <button aria-haspopup="true" mat-button=""
+                        class="mat-focus-indicator mat-menu-trigger flex-row-button mat-button mat-button-base"><span
+                            class="mat-button-wrapper">
+                            <mat-icon role="img"
+                                class="mat-icon notranslate mat-icon-lg material-icons mat-icon-no-color"
+                                aria-hidden="true">shopping_cart</mat-icon>
+                                <!-- <span class="material-icons">
+                                    shopping_cart
+                                    </span> -->
+                            <div fxlayout="column" fxlayoutalign="center center" fxshow="false"
+                                fxshow.gt-xs="" class="top-cart"
+                                style="place-content: center; align-items: center; flex-direction: column; box-sizing: border-box; display: flex;">
+                                <span> Shopping Cart</span>
+                               
+                            </div>
+                            <mat-icon role="img"
+                                class="mat-icon notranslate mat-icon-sm material-icons mat-icon-no-color"
+                                aria-hidden="true">arrow_drop_down</mat-icon>
+                        </span>
+                        <div matripple="" class="mat-ripple mat-button-ripple"></div>
+                        <div class="mat-button-focus-overlay"></div>
+                    </button>
+                </div>
+            </div>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</mat-sidenav-container>
+<app-menu></app-menu>
+<div class="theme-container main">
+    <!-- <app-home></app-home> -->
+    <router-outlet></router-outlet>
+</div>
